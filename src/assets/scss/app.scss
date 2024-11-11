@@ -28,16 +28,7 @@ body {
   }
 }
 
-// Header styles
-.header {
-  height: $header-height;
-  background-color: $primary-color;
-  color: $text-color;
-  display: flex;
-  align-items: center;
-  padding: 0 $spacing-lg;
-  margin-left: $sidebar-width;
-}
+
 .content-area {
   display: grid;
   grid-template-columns: $sidebar-width auto;

@@ -1,75 +1,91 @@
 
-// Header styles
-
-header.navbar {
+// Header Styles
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: $background-color;
+  color: $color-white;
+  padding: $spacing-sm $spacing-md;
   height: $header-height;
-  border-bottom: 1px solid $border-color;
-  padding: 0 $spacing-unit;
 
-  .navbar-brand img {
-    max-height: 40px;
-  }
-
-  .form-control {
-    border-color: $border-color;
-    &:focus {
-      box-shadow: none;
-      border-color: $primary-color;
+  .logo {
+    width: 200px;
+    img {
+      width: 100%;
     }
-  }
-
-  .btn-outline-primary {
-    color: $primary-color;
-    border-color: $primary-color;
-    &:hover {
-      background-color: $primary-color;
-      color: #fff;
-    }
-  }
-
-  .nav-link {
-    color: $text-color;
-    font-size: $font-size-md;
-    margin: 0 $spacing-unit;
-
-    .bi {
+    h1 {
+      margin-left: $spacing-xs;
       font-size: $font-size-lg;
+      font-weight: bold;
+      color: $color-white;
     }
   }
 
-  // Notification and message badges
-  .badge {
-    font-size: 0.75rem;
-    font-weight: bold;
-  }
+ 
+}
 
-  // Dropdown menu styling
-  .dropdown-menu {
-    padding: $spacing-unit 0;
-    font-size: $font-size-md;
-    border-radius: 0.25rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
+// Search Bar Styling
+.search-widget {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: $color-white;
+  display: flex;
+.search-bar {
+  border: 1px solid $border-color;
+}
 
-  .rounded-circle {
-    border: 2px solid $primary-color;
-  }
 
-  .btn-primary {
+  .search-btn {
+    border: none;
+    padding: $spacing-sm;
     background-color: $primary-color;
-    border-color: $primary-color;
-    &:hover {
-      background-color: darken($primary-color, 10%);
+  }
+}
+
+// Search Result Styling
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: $spacing-xs 0;
+    color: $color-white;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 }
 
-// Responsive adjustments
+
+// Responsive Styling
 @include respond-to(sm) {
-  header.navbar {
-    .form-control {
-      width: 100px;
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: $spacing-xs;
+
+    .logo-container {
+      margin-bottom: $spacing-xs;
+    }
+
+    .actions {
+      gap: $spacing-xs;
+      width: 100%;
+
+      input[type="text"] {
+        width: 100%;
+      }
     }
   }
 }
