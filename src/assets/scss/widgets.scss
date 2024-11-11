@@ -1,0 +1,12 @@
+.search-widget {
+  .dropdown-toggle {
+    color: $primary-color;
+    background-color: $background-color;
+    border: none;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+
+@import'variables';
+@import'header';
+@import 'widgets';
+@import'global';
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+// Sidebar styles
+.sidebar {
+
+  background-color: $primary-color;
+  color: $text-color;
+  height: 100%;
+  padding: $spacing-lg;
+  top: 0;
+
+  .nav-link {
+    color: $text-color;
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-md;
+    &:hover {
+      background-color: $secondary-color;
+      color: $dark-text-color;
+    }
+  }
+}
+
+// Header styles
+.header {
+  height: $header-height;
+  background-color: $primary-color;
+  color: $text-color;
+  display: flex;
+  align-items: center;
+  padding: 0 $spacing-lg;
+  margin-left: $sidebar-width;
+}
+.content-area {
+  display: grid;
+  grid-template-columns: $sidebar-width auto;
+}
+// Main content panel styles
+.content-panel {
+
+  padding: $spacing-lg;
+  background-color: $background-color;
+  min-height: 100vh;
+  width: 100%;
+
+  h1 {
+    font-size: $font-size-xxl;
+    color: $text-color;
+  }
+  p {
+    font-size: $font-size-md;
+    color: $text-color;
+  }
+}
+
+
+
+// Responsive adjustments
+@include respond-to(sm) {
+  .sidebar {
+    width: 200px;
+  }
+  .content-panel,
+  .header {
+    margin-left: 200px;
+  }
+}

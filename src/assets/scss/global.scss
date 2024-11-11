@@ -1,0 +1,44 @@
+// Text Colors
+.text-primary { color: $primary-color; }
+.text-secondary { color: $secondary-color; }
+.text-dark { color: $dark-text-color; }
+.text-light { color: $text-color; }
+
+// Background Colors
+.bg-primary { background-color: $primary-color; }
+.bg-secondary { background-color: $secondary-color; }
+.bg-dark { background-color: $dark-bg-color; }
+.bg-light { background-color: $background-color; }
+
+// Font Sizes
+.fs-xs { font-size: $font-size-xs; }
+.fs-sm { font-size: $font-size-sm; }
+.fs-md { font-size: $font-size-md; }
+.fs-lg { font-size: $font-size-lg; }
+.fs-xl { font-size: $font-size-xl; }
+
+// Spacing Utilities
+.mt-xs { margin-top: $spacing-xs; }
+.mt-sm { margin-top: $spacing-sm; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+
+.p-xs { padding: $spacing-xs; }
+.p-sm { padding: $spacing-sm; }
+.p-md { padding: $spacing-md; }
+.p-lg { padding: $spacing-lg; }
+
+:root {
+  --bg-color: #{$background-color};
+  --text-color: #{$text-color};
+  --primary-color: #{$primary-color};
+}
+
+[data-theme="dark"] {
+  --bg-color: #{$dark-bg-color};
+  --text-color: #{$dark-text-color};
+  --primary-color: #{$dark-primary-color};
+}
+// Layout Widths
+.header { height: $header-height; }
+.sidebar { width: $sidebar-width; }

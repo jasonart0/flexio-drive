@@ -1,0 +1,75 @@
+
+// Header styles
+
+header.navbar {
+  background-color: $background-color;
+  height: $header-height;
+  border-bottom: 1px solid $border-color;
+  padding: 0 $spacing-unit;
+
+  .navbar-brand img {
+    max-height: 40px;
+  }
+
+  .form-control {
+    border-color: $border-color;
+    &:focus {
+      box-shadow: none;
+      border-color: $primary-color;
+    }
+  }
+
+  .btn-outline-primary {
+    color: $primary-color;
+    border-color: $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+
+  .nav-link {
+    color: $text-color;
+    font-size: $font-size-md;
+    margin: 0 $spacing-unit;
+
+    .bi {
+      font-size: $font-size-lg;
+    }
+  }
+
+  // Notification and message badges
+  .badge {
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  // Dropdown menu styling
+  .dropdown-menu {
+    padding: $spacing-unit 0;
+    font-size: $font-size-md;
+    border-radius: 0.25rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .rounded-circle {
+    border: 2px solid $primary-color;
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Responsive adjustments
+@include respond-to(sm) {
+  header.navbar {
+    .form-control {
+      width: 100px;
+    }
+  }
+}
