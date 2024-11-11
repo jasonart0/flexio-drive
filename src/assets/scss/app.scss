@@ -55,11 +55,5 @@ body {
 
 // Responsive adjustments
 @include respond-to(sm) {
-  .sidebar {
-    width: 200px;
-  }
-  .content-panel,
-  .header {
-    margin-left: 200px;
-  }
+
 }

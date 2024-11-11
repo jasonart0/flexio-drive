@@ -6,8 +6,8 @@ const SideBar = ({ userRole }) => {
   
   return (
       
-       <aside className="w-64 bg-gray-800 text-white p-5">
-       <h2 className="text-xl font-bold mb-6">Admin Dashboard</h2>
+       <aside className="">
+      
        <nav>
          <ul className="space-y-4">
            <li><a href="#overview" className="block hover:bg-gray-700 p-2 rounded">Overview</a></li>

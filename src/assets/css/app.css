@@ -176,12 +176,4 @@ body {
     font-size: 1rem;
     color: #333333; }
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 200px; }
-
-  .content-panel,
-  .header {
-    margin-left: 200px; } }
-
 /*# sourceMappingURL=app.css.map */
