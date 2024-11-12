@@ -1,91 +1,69 @@
-
 // Header Styles
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $background-color;
-  color: $color-white;
-  padding: $spacing-sm $spacing-md;
-  height: $header-height;
 
-  .logo {
-    width: 200px;
-    img {
-      width: 100%;
-    }
-    h1 {
-      margin-left: $spacing-xs;
-      font-size: $font-size-lg;
-      font-weight: bold;
-      color: $color-white;
-    }
-  }
 
+.navbar-brand {
+  color: $primary-color;
+  width: $sidebar-width;
+  font-size: $font-size-xl;
+  border-right: 1px solid $border-color;
+  margin-right: 0;
+  font-weight: bold;
+  height: auto;
+  padding: $spacing-xl;
+  
+  padding-left: 0;
  
-}
+  img {
+    width: $brand-size;
 
-// Search Bar Styling
-.search-widget {
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  color: $color-white;
+  }
+}
+#profile-dropdown {
   display: flex;
-.search-bar {
-  border: 1px solid $border-color;
+  align-items: center;
 }
-
-
-  .search-btn {
-    border: none;
-    padding: $spacing-sm;
-    background-color: $primary-color;
-  }
+header {
+  background: $color-white;
+  box-shadow: $shadow;
+  height: $header-height;
+  position: fixed;
+  width: 100%;
 }
-
-// Search Result Styling
-ul {
-  list-style: none;
+ .navbar {
+  align-items: center;
   padding: 0;
-  margin: 0;
-
-  li {
-    padding: $spacing-xs 0;
-    color: $color-white;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $border-color;
+  background:none;
+  .navbar-nav {
+    align-items: center;
+  }
+  .dropdown {
+    border-right:1px solid $border-color;
+    padding: $spacing-xs;
+    margin: 0;
+    &:last-child {
+      border-right: none;
     }
-
-    a {
-      color: $text-color;
-      text-decoration: none;
-      &:hover {
-        color: $primary-color;
-      }
+    .btn .badge {
+      position: absolute;
     }
   }
 }
 
-
-// Responsive Styling
-@include respond-to(sm) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: $spacing-xs;
-
-    .logo-container {
-      margin-bottom: $spacing-xs;
-    }
-
-    .actions {
-      gap: $spacing-xs;
-      width: 100%;
-
-      input[type="text"] {
-        width: 100%;
-      }
-    }
+.profile-Avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  overflow: hidden;
+  border-radius: 50%;
+  img {
+width: 100%;
+height: 100%;
   }
+}
+// Responsive Design
+@include respond-to(sm) {
+
+}
+
+@include respond-to(xs) {
+
 }

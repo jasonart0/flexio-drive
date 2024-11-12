@@ -1,5 +1,5 @@
 import React from 'react';
-import StatsCards from './StatsCards'; // Import the StatsCards component
+import StatsCards from '../widgets/StatsCards'; // Import the StatsCards component
 
 const statsData = [
   { title: "Total Users", value: 124 },

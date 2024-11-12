@@ -1,20 +1,30 @@
 import { Routes, Route } from 'react-router-dom';
-import Dashboard from './Dashboard.js'; // Import Dashboard correctly
-import AppHeader from '../components/AppHeader.js';
-import SideBar from '../components/SideBar.js';
+// pages
+import Dashboard from './pages/Dashboard'; 
+import UserManagement from './pages/UserManagement';
+import Dispatches from './pages/Dispatches';
+import Vehicles from './pages/Vehicles';
+import Reports from './pages/Reports';
+//components
+import Header from '../components/Header.js';
+import Sidebar from '../widgets/Sidebar.js';
 function Admin() {
   return (
     <div>
-      <AppHeader />
+      <Header />
       <div className='content-area'>
-        <SideBar />
+        <Sidebar />
         <div className='content-panel'>
-        <Routes>
-      <Route path="/" element={<Dashboard />} /> {/* Accessible at /admin/dashboard */}
-    </Routes>
+          <Routes>
+            <Route path="/overview" element={<Dashboard />} />
+            <Route path="/users" element={<UserManagement />} />
+            <Route path="/dispatches" element={<Dispatches />} />
+            <Route path="/vehicles" element={<Vehicles />} />
+            <Route path="/reports" element={<Reports />} />
+          </Routes>
         </div>
       </div>
-   
+
     </div>
   );
 }

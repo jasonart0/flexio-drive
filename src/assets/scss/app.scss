@@ -1,11 +1,13 @@
 
 @import'variables';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 @import'header';
 @import 'widgets';
 @import'global';
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-size: $base-font-size;
 }
 
 // Sidebar styles
@@ -32,17 +34,21 @@ body {
 .content-area {
   display: grid;
   grid-template-columns: $sidebar-width auto;
+  padding-top: $header-height;
+  height: 100vh;
 }
 // Main content panel styles
 .content-panel {
 
   padding: $spacing-lg;
   background-color: $background-color;
-  min-height: 100vh;
+  min-height: 100%;
+  max-height: 100%;
+  overflow-y: scroll;
   width: 100%;
 
   h1 {
-    font-size: $font-size-xxl;
+    font-size: $font-size-2xl;
     color: $text-color;
   }
   p {
